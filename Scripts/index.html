@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+ <script async src="https://js.cx/hello/ads.js"></script> <!-- с "async" грузится третьим, без "async" - первым. "?speed=0" лох и опозорился -->
+ <script defer src="alert.js"></script>   <!-- defer - вежливый. сохраняет относительный порядок выполнения, ждёт весь документ -->
+ <script async src="alert2.js"></script>   <!-- async - огонь по готовности (кроме IE9) -->
+
+ <p>допустим</p>  <!-- Без атрибутов виден только в конце, с атрибутами загружается вторым -->
+
+</body>
+
+</html>
+<!-- При добавлении средствами JS скрипты реагируют как async(addScript).  "script.async = false" -сохранить порядок -->
