@@ -1,0 +1,17 @@
+<meta charset="utf-8">
+<script>
+    var answer = parseInt(Math.random() * 100);
+    for (var i = 5; i > 0; i--) { // i = i - 1;
+      var number = +prompt("Какое число загадал компьютер? \nУ вас есть " + i + " попыток");
+      if (number == answer) {
+        alert("Верно!");
+        break;
+      } else if (number < answer) {
+        alert("слишком маленькое число");
+      } else if (number > answer) {
+        alert("слишком большое число");
+      }
+    }
+
+    alert("Правильный ответ " + answer);
+</script>
