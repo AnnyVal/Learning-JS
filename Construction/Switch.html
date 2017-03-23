@@ -1,4 +1,4 @@
-//  Напишите if..else, соответствующий следующему switch:
+<!-- //  Напишите if..else, соответствующий следующему switch:
 //  switch (browser) {
 //   case 'IE':
 //     alert( 'О, да у вас IE!' );
@@ -13,7 +13,7 @@
 //
 //   default:
 //     alert( 'Мы надеемся, что и в вашем браузере все ок!' );
-// }
+// } -->
 
 
 
@@ -29,6 +29,43 @@ var browser = prompt ("What's your browser?");
     alert( 'Да, и эти браузеры мы поддерживаем' );
   } else {
     alert( 'Мы надеемся, что и в вашем браузере все ок!' );
+  }
+
+</script>
+
+
+
+// Перепишите код с использованием одной конструкции switch:
+// var a = +prompt('a?', '');
+//
+// if (a == 0) {
+//   alert( 0 );
+// }
+// if (a == 1) {
+//   alert( 1 );
+// }
+//
+// if (a == 2 || a == 3) {
+//   alert( '2,3' );
+// }
+
+<script>
+
+var a = +prompt('a?', '');
+
+  switch (a) {
+    case 0:
+      alert(0);
+      break;
+
+    case 1:
+      alert(1);
+      break;
+
+    case 2:
+    case 2:
+      alert(2,3);
+      break;
   }
 
 </script>
