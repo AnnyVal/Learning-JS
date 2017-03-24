@@ -1,0 +1,13 @@
+<script>
+
+var age = prompt ("Age?");
+
+function checkAge(age) {
+  return (age > 18) ? true : confirm('Родители разрешили?'); //если первый аргумент true то возвращается второй аргумент, если false то третий
+}
+
+checkAge(age);
+
+</script>
+
+<!-- лучше использовать if else для читаемости кода -->
