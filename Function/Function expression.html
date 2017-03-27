@@ -1,0 +1,34 @@
+
+    // Function Declaration – функция, объявленная в основном потоке кода.
+    // Function Expression – объявление функции в контексте какого-либо выражения, например присваивания.
+
+
+  // Function Declaration
+function sum(a, b) {
+  return a + b;
+}
+
+// Function Expression
+var sum = function(a, b) {
+  return a + b;
+}
+
+
+// функции, объявленные как Function Declaration, создаются интерпретатором до выполнения кода.
+
+// Функциональное выражение, которое не записывается в переменную, называют анонимной функцией.
+
+<script>
+
+function ask(question, yes, no) {
+  if (confirm(question)) yes()
+  else no();
+}
+
+ask(
+  "Вы согласны?",
+  function() { alert("Вы согласились."); },
+  function() { alert("Вы отменили выполнение."); }
+);
+
+</script>
