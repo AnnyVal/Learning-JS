@@ -31,6 +31,15 @@
     return n + SumToCicle(n - 1);
 
   }
+
+  function sumTo(n) {
+    if (n == 1) return 1;
+    return n + sumTo(n - 1);
+  }
+
+  alert( sumTo(100) );
+
+
   SumToCicle(4);
   console.log (SumToCicle(4));
 
