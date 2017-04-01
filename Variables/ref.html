@@ -1,0 +1,33 @@
+var MyComponent = React.createClass({
+  handleClick: function() {
+    // Explicitly focus the text input using the raw DOM API.
+      this.textInput.focus();
+  },
+  render: function() {
+    // The ref attribute is a callback that saves a reference to the
+    // component to this.textInput when the component is mounted.
+    return (
+      <div>
+        <input type="text" ref={(thisInput) => {this.textInput = thisInput}} />
+        <input
+          type="button"
+          value="Focus the text input"
+          onClick={this.handleClick}
+        />
+      </div>
+    );
+  }
+});
+
+ReactDOM.render(
+  <MyComponent />,
+  document.getElementById('app')
+);
+
+(thisInput) => {this.textInput = thisInput}
+
+ref={ function(alertButton) { this.refToAlerButton = alertButton; }}
+
+onClickAlert() {
+this.refToAlertButton.click();
+}
