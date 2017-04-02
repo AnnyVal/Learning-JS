@@ -27,21 +27,24 @@
 
 
   function SumToCicle(n) {
-    if (n > 0)
-    return n + SumToCicle(n - 1);
-
+    if (n > 0) {
+    return n + SumToCicle(n - 1); // whithout "return" func will reurn "undefined"
+    }
+    else {
+      return 0;
+    }
   }
 
-  function sumTo(n) {
-    if (n == 1) return 1;
-    return n + sumTo(n - 1);
-  }
-
-  alert( sumTo(100) );
-
+  // function sumTo(n) {
+  //   if (n == 1) return 1;
+  //   return n + sumTo(n - 1);
+  // }
+  //
+  // alert( sumTo(100) );
 
   SumToCicle(4);
   console.log (SumToCicle(4));
+  console.log (SumToCicle('kek'));
 
 
 

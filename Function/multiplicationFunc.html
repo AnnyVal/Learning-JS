@@ -1,0 +1,26 @@
+// multiplication of all numbers from n to 1.
+
+<script>
+
+  function multRec(n) {
+    if (n > 1) {
+      return n * multRec(n - 1);
+    } else {
+      return 1;
+    }
+  }
+
+console.log(multRec(3)); //6
+
+  function multIter(n) {
+    var res = 1;
+    for (var a = n; a > 1; a--) {
+      res = res * a;
+    }
+  return res;
+  }
+console.log(multIter(4)); //24
+
+
+
+</script>

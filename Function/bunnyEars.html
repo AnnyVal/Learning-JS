@@ -1,0 +1,16 @@
+<script>
+
+  //сколько ушей у n кроликов? Не использовать циклы и умножение.
+  function bunnyEars(n) {
+    if (n > 0) {
+    return bunnyEars( n -  1) + 2;
+      } else {
+      return 0;
+    }
+  }
+
+console.log(bunnyEars(8)); //16
+console.log(bunnyEars(1));
+console.log(bunnyEars(0));
+
+</script>
