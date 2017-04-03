@@ -1,0 +1,28 @@
+<script>
+
+//factorial n (n!)
+// sum of all factorials from 1 to n
+
+  function fact(n) {
+    if (n > 1) {
+       return n * fact(n - 1);
+    } else {
+      return 1;
+    }
+  }
+console.log(fact(5)); //120
+
+  function sumFact(n) {
+    if (n > 0) {
+      return fact(n) + sumFact(n - 1);
+    }
+    else {
+      return fact(n);
+    }
+  }
+  console.log(sumFact(4));
+
+  
+
+
+</script>
