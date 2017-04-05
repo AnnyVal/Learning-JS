@@ -14,7 +14,27 @@ function fibRec(n) {
 // TO SLOW. I shoud not do this.
 
 function fib(n) {
-  
+  var prevPrev = 1;
+  var prev = 1;
+  var f = prev + prevPrev;
+  for (var i = 0; i < n; i++) {
+
+  }
+  return f;
 }
+console.log(fib(0));
+console.log(fib(1));
+console.log(fib(2));
+console.log(fib(3));
+console.log(fib(5));
+
+
 
 </script>
+
+
+// var f0 = 1;
+// var f1 = 1;
+// var f2 = f1 + f0;
+// var f3 = f2 + f1;
+// var f4 = f3 + f2;
