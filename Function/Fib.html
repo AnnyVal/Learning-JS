@@ -2,26 +2,28 @@
 
 //Fn = Fn-1 + Fn-2
 
-function fibRec(n) {
-  if (n <= 0) {
-    return 0;
-  } else if (n == 1) {
-    return 1;
-  } else {
-    return fibRec(n - 1) + fibRec(n - 2);
-  }
-}
+// function fibRec(n) {
+//   if (n <= 0) {
+//     return 0;
+//   } else if (n == 1) {
+//     return 1;
+//   } else {
+//     return fibRec(n - 1) + fibRec(n - 2);
+//   }
+// }
 // TO SLOW. I shoud not do this.
 
 function fib(n) {
   var prevPrev = 1;
   var prev = 1;
-  var f = prev + prevPrev;
-  for (var i = 0; i < n; i++) {
-
+    for (var i = 3; i <= n; i++) {
+      var res = prev + prevPrev;
+      prevPrev = prev;
+      prev = res;
   }
-  return f;
+  return res;
 }
+//переписать с if двумя
 console.log(fib(0));
 console.log(fib(1));
 console.log(fib(2));
