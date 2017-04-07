@@ -13,29 +13,85 @@
 // }
 // TO SLOW. I shoud not do this.
 
+// function fib(n) {
+//   var a = 1, //F1
+//     b = 1;  //F2
+//   for (var i = 3; i <= n; i++) { // F4 = 3?   Цикл здесь начинается с i=3, так как первое и второе числа Фибоначчи заранее записаны в переменные a=1, b=1.  --BUT F3 = 2!!1!
+//     var c = a + b;  //F3
+//     a = b;
+//     b = c;
+//   }
+//   return b; //previous Fn: F2
+// }
+// вариант решения из задачника: почему i = 3? Потому, что в return функции на самом деле fib(n-1) - var b, а не var c.
+
 function fib(n) {
-  var prevPrev = 1;
-  var prev = 1;
-    for (var i = 3; i <= n; i++) {
-      var res = prev + prevPrev;
-      prevPrev = prev;
-      prev = res;
+
+  var prev = 1; //F2
+  var prevPrev = 1;  //F1
+
+  if ( n == 0) {
+    return 0;
   }
-  return res;
+  else if ( n == 1 ){
+    return 1;
+  }
+  else {
+    for (var i = 2; i <= n; i++) { //var i = 2 because i = F3 (start cond for var prev & var prevPrev =1) = 1 + 1
+      var res = prev + prevPrev; //F3 = 2 at start
+      var prevPrev = prev; //F1 = F2
+      var prev = res; //current Fn, F2 = F3,
+      }
+    }
+    return prevPrev;
 }
-//переписать с if двумя
-console.log(fib(0));
-console.log(fib(1));
-console.log(fib(2));
-console.log(fib(3));
-console.log(fib(5));
+//ошибается на 1 шаг: Fn выходит =F(n+1) при return res & return
+
+function fib(n){
+  if (n == 0) {
+    return 0;
+  }
+  else if (n == 1 || n == 2){ //add F2 here coz im lazy; F1 & f2 = 1 each
+    return 1;
+  }
+  else {
+    var prev = 1; //F2
+    var prevPrev = 1;  //F1
+    // var i = n; //колличество иттераций
+
+      while (n > 2 ) { // i < F3, becouse we got F1 & F2 on start => defoult Fn res = F3
+        var res = prev + prevPrev; //F3 = 2 at start
+        var prevPrev = prev; //F1 = F2
+        var prev = res; //current Fn, F2 = F3,
+        n--;
+      }
+      return res;
+    }
+
+     //console.log("Fibonacci number F(" + i + ") = " + res);
+}
+
+//fib(4);
+
+console.log(fib(0)); //0
+console.log(fib(1)); //1
+console.log(fib(2)); //1
+console.log(fib(3)); //2
+console.log(fib(4)); //3
+console.log(fib(5)); //5
+console.log(fib(6)); //8
+console.log(fib(7)); //13
+console.log(fib(8)); //21
+console.log(fib(9)); //34
+console.log(fib(10)); //55
+console.log(fib(77)); //5527939700884757
 
 
 
 </script>
 
 
-// var f0 = 1;
+// var f0 = 0;
 // var f1 = 1;
 // var f2 = f1 + f0;
 // var f3 = f2 + f1;
