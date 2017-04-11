@@ -1,0 +1,19 @@
+//Создайте страницу, которая предлагает ввести два числа и выводит их сумму.
+
+<script>
+
+function isNumeric(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
+
+while (isNumeric(input) !== true) {
+  var input = +prompt ("input number");
+}
+while (isNumeric(inputSecond) !== true) {
+  var inputSecond = +prompt ("input second number");
+}
+var sum = input + inputSecond;
+console.log(+sum.toFixed(5)); //VERY IMPORTANT "+" before sum.toFixed
+
+</script>
