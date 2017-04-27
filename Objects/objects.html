@@ -36,6 +36,28 @@ for (var key in menu) {
   // ..и выведет имя свойства и его значение
 
   alert( "Ключ: " + key + " значение: " + menu[key] );
+
 }
+
+
+"use strict";
+
+var salaries = {
+  "Вася": 100,
+  "Петя": 300,
+  "Даша": 250
+};
+
+var max = 0;
+var maxName = "";
+for (var name in salaries) {
+  if (max < salaries[name]) {
+    max = salaries[name];
+    maxName = name;
+  }
+}
+
+alert( maxName || "нет сотрудников" );
+
 
 </script>
